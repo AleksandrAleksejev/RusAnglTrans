@@ -56,5 +56,32 @@ from gtts import gTTS
 def heli(text:str,keel:str):
     obj=gTTS(text=text,lang=keel,slow=False).save("heli.mp3")
     os.system("heli.mp3")
-def proverka(f:str,l:list):
-    proverka 
+
+import random
+def proverka(l1:list,l2:list):
+    resultat=0
+    lists=[]
+    lists.extend(l1)
+    lists.extend(l2)
+    random.shuffle(lists)
+    print("random list ",lists)
+    for i in range(len(l1)):
+        print(l1,l1)
+        print(l2,l2)
+        otvet=input(f"Переведи слово - '{lists[i]}': ")
+        if otvet in l1 or otvet in l2:
+            if lists[i] in l1:
+               if l1.index(lists[i])==l2.index(otvet):
+                    resultat+=1
+                    print("Молодец!Правильно")
+                    print()
+            elif lists[i] in l2:
+                if l2.index(lists[i])==l1.index(otvet):
+                    resultat+=1
+                    print("Молодец!Правильно")
+                    print()
+        else:
+            print("Неправильно")
+            print()
+    resultPer=(result/len(l1))*100
+    print(f"Ваш результат: {resultPer}%")

@@ -25,7 +25,6 @@ while True:
         keel=input("На каком языке?(ru,et,en)")#ru et en
         sona=input("Слово:")
         heli(sona,keel)
-    elif proverka.upper()=="L":
-        proverka=input("Хотите ли сделать проверку знаний?")
-        otvet=input("Ответ:")
+    elif language.upper()=="L":
+        proverka(rus,ang)
     else:break
